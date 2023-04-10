@@ -56,7 +56,7 @@ namespace HW.Repositories
                 MakeFull = string.Concat(x.Make, " ", x.ComercialDescription), 
                 EmissionStandart = Enum.GetName(typeof(Emission), x.EmissionStandart),
                 Color = Enum.GetName(typeof(Color), x.Color),
-                Capacity = x.Capacity,
+                CapacityLiters = decimal.Round(x.Capacity / 1000m, 1),
                 ManufactureYear = x.ManufactureDate.Year
             }).ToList();
             return cars;
