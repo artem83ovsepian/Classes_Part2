@@ -19,9 +19,11 @@ namespace HW.Controllers
         }
 
         [HttpGet]
+        [Route("GetCars")]
         public IEnumerable<Car> Get()
         {
             return _carRepository.CarsGet();
         }
+
     }
 }
