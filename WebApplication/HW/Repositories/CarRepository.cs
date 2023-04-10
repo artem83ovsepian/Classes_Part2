@@ -50,8 +50,7 @@ namespace HW.Repositories
 
         public IEnumerable<CarAPI> CarsGet()
         {
-            var cars = new List<CarAPI>();
-            cars = _carsList.Select(x => new CarAPI
+            return _carsList.Select(x => new CarAPI
             { 
                 MakeFull = string.Concat(x.Make, " ", x.ComercialDescription), 
                 EmissionStandart = Enum.GetName(typeof(Emission), x.EmissionStandart),
@@ -59,7 +58,6 @@ namespace HW.Repositories
                 CapacityLiters = decimal.Round(x.Capacity / 1000m, 1),
                 ManufactureYear = x.ManufactureDate.Year
             }).ToList();
-            return cars;
         }
     }
 }
