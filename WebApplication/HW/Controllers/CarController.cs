@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using HW.Repositories;
 using HW.Entities;
+using HW.Entities.BAL;
 
 namespace HW.Controllers
 {
@@ -20,7 +21,7 @@ namespace HW.Controllers
 
         [HttpGet]
         [Route("GetCars")]
-        public IEnumerable<Car> GetCars()
+        public IEnumerable<CarAPI> GetCars()
         {
             return _carRepository.CarsGet();
         }

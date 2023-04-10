@@ -1,17 +1,20 @@
 ﻿using HW.Entities;
 using HW.Entities.Enums;
+using HW.Entities.BAL;
 
 namespace HW.Repositories
 {
     public class CarRepository
     {
-        public IEnumerable<Car> CarsGet()
+        private List<Car> _carsList;
+
+        public CarRepository()
         {
-            return new List<Car>()
+            _carsList = new List<Car>()
             {
                 new Car()
-                { 
-                    Make  = "Ford", 
+                {
+                    Make  = "Ford",
                     ComercialDescription = "Fusion",
                     ManufactureDate = DateTime.Parse("08/18/2018"),
                     Capacity = 2000,
@@ -43,6 +46,20 @@ namespace HW.Repositories
                     VIN = "SEEGR4534BDFV443"
                 }
             };
+        }
+
+        public IEnumerable<CarAPI> CarsGet()
+        {
+            var cars = new List<CarAPI>();
+            cars = _carsList.Select(x => new CarAPI
+            { 
+                MakeFull = string.Concat(x.Make, " ", x.ComercialDescription), 
+                EmissionStandart = Enum.GetName(typeof(Emission), x.EmissionStandart),
+                Color = Enum.GetName(typeof(Color), x.Color),
+                Capacity = x.Capacity,
+                ManufactureYear = x.ManufactureDate.Year
+            }).ToList();
+            return cars;
         }
     }
 }
