@@ -1,6 +1,6 @@
-﻿using HW.Entities;
-using HW.Entities.Enums;
+﻿using HW.Entities.Enums;
 using HW.Entities.BAL;
+using HW.Entities.DAL;
 
 namespace HW.Repositories
 {
@@ -48,15 +48,35 @@ namespace HW.Repositories
             };
         }
 
-        public IEnumerable<CarAPI> CarsGet()
+        public IEnumerable<CarBrief> CarsGet()
         {
-            return _carsList.Select(x => new CarAPI
-            { 
-                MakeFull = string.Concat(x.Make, " ", x.ComercialDescription), 
+            return _carsList.Select(x => new CarBrief
+            {
+                Name = string.Concat(x.Make, " ", x.ComercialDescription), 
                 EmissionStandart = Enum.GetName(typeof(Emission), x.EmissionStandart),
                 Color = Enum.GetName(typeof(Color), x.Color),
                 CapacityLiters = decimal.Round(x.Capacity / 1000m, 1),
                 ManufactureYear = x.ManufactureDate.Year
+            }).ToList();
+        }
+
+        public IEnumerable<CarName> CarNameGet()
+        {
+            return _carsList.Select(x => new CarName { Name = string.Concat(x.Make, " ", x.ComercialDescription) }).ToList();
+        }
+
+        public IEnumerable<CarEngine> CarEngineGet()
+        {
+            return _carsList.Select(x => new CarEngine { Name = string.Concat(x.Make, " ", x.ComercialDescription), Engine = x.Capacity }).ToList();
+        }
+
+        public IEnumerable<CarAge> CarAgeGet()
+        {
+            return _carsList.Select(x => new CarAge {                 
+                Age = (DateTime.UtcNow.Year - x.ManufactureDate.Year - 1) +
+                    (((DateTime.UtcNow.Month > x.ManufactureDate.Month) ||
+                    ((DateTime.UtcNow.Month == x.ManufactureDate.Month) && (DateTime.UtcNow.Day >= x.ManufactureDate.Day))) ? 1 : 0),
+                Name = string.Concat(x.Make, " ", x.ComercialDescription)
             }).ToList();
         }
     }

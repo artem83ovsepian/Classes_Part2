@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using HW.Repositories;
-using HW.Entities;
 using HW.Entities.BAL;
 
 namespace HW.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class CarController : ControllerBase
     {
 
@@ -20,8 +19,7 @@ namespace HW.Controllers
         }
 
         [HttpGet]
-        [Route("GetCars")]
-        public IEnumerable<CarAPI> GetCars()
+        public IEnumerable<CarBrief> GetCars()
         {
             return _carRepository.CarsGet();
         }

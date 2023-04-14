@@ -1,5 +1,4 @@
-﻿
-namespace HW.Entities
+﻿namespace HW.Entities.DAL
 {
     public class Car : Vehicle
     {

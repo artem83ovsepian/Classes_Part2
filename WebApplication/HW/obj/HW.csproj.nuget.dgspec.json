@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Artem.Ovsepian\\Source\\Repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj": {}
+    "C:\\Users\\Artem.Ovsepian\\source\\repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Artem.Ovsepian\\Source\\Repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj": {
+    "C:\\Users\\Artem.Ovsepian\\source\\repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Artem.Ovsepian\\Source\\Repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj",
+        "projectUniqueName": "C:\\Users\\Artem.Ovsepian\\source\\repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj",
         "projectName": "HW",
-        "projectPath": "C:\\Users\\Artem.Ovsepian\\Source\\Repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj",
+        "projectPath": "C:\\Users\\Artem.Ovsepian\\source\\repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\HW.csproj",
         "packagesPath": "C:\\Users\\Artem.Ovsepian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Artem.Ovsepian\\Source\\Repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\obj\\",
+        "outputPath": "C:\\Users\\Artem.Ovsepian\\source\\repos\\artem83ovsepian\\Classes_Part2\\WebApplication\\HW\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Artem.Ovsepian\\AppData\\Roaming\\NuGet\\NuGet.Config",
