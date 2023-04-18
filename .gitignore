@@ -365,4 +365,11 @@ FodyWeavers.xsd
 # Ignore any files in /bin and /obj Folders
 **/bin/*
 **/obj/*
-**/.vs/*
+*/.vs/*
+
+WebApplication/.vs
+
+**/ProjectEvaluation/*
+**/DesignTimeBuid/*
+**/FileContentIndex/*
+**/v17/*
