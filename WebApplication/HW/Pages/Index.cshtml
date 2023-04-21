@@ -1,0 +1,37 @@
+﻿@page
+@model HW.Pages.AboutMeModel
+@{
+    ViewData["Title"] = Model.PageName;
+}
+
+<div class="about-wrapper">
+<div class="col-6">
+    <h1 class="text-info">@Model.Name</h1>
+    <img src=@Model.Photo />
+    <p>I'm @Model.Description</p>
+</div>
+
+<div>
+    <h4 class="text-info">Personal Qualities</h4>
+    @foreach(var item in Model.PersonalQualities)
+    {
+        <tr>
+            <li>@item</li>
+        </tr>
+    }
+    <br>
+    <h4 class="text-info">My Age</h4>
+    <p>@Model.Age years</p>
+    <br>
+    <h4 class="text-info">My Age</h4>
+    <p>@Model.Age years</p>
+    <br>
+    <h4 class="text-info">My Education</h4>
+    <p>@Model.Education</p>
+    <br>
+</div>
+</div>
+
+<div>
+    <a href="@Model.URL">Find me on Wiki</a>
+</div>

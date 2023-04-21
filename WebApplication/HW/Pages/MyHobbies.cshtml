@@ -1,0 +1,19 @@
+﻿@page
+@model HW.Pages.MyHobbiesModel
+@{
+    ViewData["Title"] = Model.PageName;
+}
+<ul class="hobbies-list">
+@foreach (var item in Model.MyHobbies.OrderBy(i => i.Id))
+{
+    
+        <li>
+            <div class="align-center">
+                <h4 class="text-info">@item.Name</h4>
+                <img src=@item.Photo />
+                <p>@item.Description</p>
+            </div>
+        </li>
+    
+}
+</ul>

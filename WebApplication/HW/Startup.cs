@@ -15,6 +15,7 @@ namespace HW
         {            
             services.AddSwaggerGen();
             services.AddControllers();
+            services.AddRazorPages();
 
             services.AddTransient<IManagementCars, ManagementCarsService>();
         }
@@ -27,6 +28,8 @@ namespace HW
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -45,6 +48,7 @@ namespace HW
                     await context.Response.WriteAsync($"{cars.GetCarName()}");
                 });
                 endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
         }
     }

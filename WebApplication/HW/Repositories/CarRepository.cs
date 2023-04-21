@@ -7,9 +7,11 @@ namespace HW.Repositories
     public class CarRepository
     {
         private List<Car> _carsList;
+        private MyUtilities _myUtilities;
 
         public CarRepository()
         {
+            _myUtilities = new MyUtilities();
             _carsList = new List<Car>()
             {
                 new Car()
@@ -73,9 +75,7 @@ namespace HW.Repositories
         public IEnumerable<CarAge> CarAgeGet()
         {
             return _carsList.Select(x => new CarAge {                 
-                Age = (DateTime.UtcNow.Year - x.ManufactureDate.Year - 1) +
-                    (((DateTime.UtcNow.Month > x.ManufactureDate.Month) ||
-                    ((DateTime.UtcNow.Month == x.ManufactureDate.Month) && (DateTime.UtcNow.Day >= x.ManufactureDate.Day))) ? 1 : 0),
+                Age = _myUtilities.GetAge(x.ManufactureDate),
                 Name = string.Concat(x.Make, " ", x.ComercialDescription)
             }).ToList();
         }
