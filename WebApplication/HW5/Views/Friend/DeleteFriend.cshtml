@@ -1,0 +1,22 @@
+﻿@model HW5.Models.Friend
+
+@{
+    ViewData["Title"] = "Delete Friend";
+}
+
+<h1>Delete Friend</h1>
+<hr />
+<div>
+    <form asp-action="DeleteFriend">
+        <div class="col-md-10">
+            @Html.DropDownList("friendId", ViewBag.Friends as SelectList)
+            <br/>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
