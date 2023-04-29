@@ -15,8 +15,8 @@ namespace HW.Repositories
             PersonalQualities = new List<string> { "Wise", "Stubborn", "Never give up hope" },
             Hobbies = new List<Hobby>
                 {
-                    new Hobby {Id = 1, Name = "Knitting", Photo = "/images/hobbies/Knitting.jpg", Description = "Instead of picking up your phone whenever you're free, the knitting hobby is a healthier way to kill time."},
-                    new Hobby {Id = 2, Name = "Dance", Photo = "/images/hobbies/Dance.jpg", Description = "I have tried a lot of dance styles: folk dance, elegant ballroom dance, ballet dance and even lively hip-hop and break-dance. I was really fond of slow waltz, tango, rumba, salsa and cha-cha-cha."},
+                    new Hobby {Id = 1, Name = "Knitting", Photo = "/images/hobbies/Knitting.jpg", Description = "Instead of picking up your phone whenever you're free, the knitting hobby is a healthier way to kill time. All you need is any old ball of wool, some knitting needles and either someone to give you an hour of their time to show you the basics or a fish about on Youtube for a good video. "},
+                    new Hobby {Id = 2, Name = "Dance", Photo = "/images/hobbies/dance.jpg", Description = "I have tried a lot of dance styles: folk dance, elegant ballroom dance, ballet dance and even lively hip-hop and break-dance. I was really fond of slow waltz, tango, rumba, salsa and cha-cha-cha."},
                     new Hobby {Id = 3, Name = "Parachuting", Photo = "/images/hobbies/Parachuting.jpg", Description = "Parachuting, including also skydiving, is a method of transiting from a high point in the atmosphere to the surface of Earth with the aid of gravity, involving the control of speed during the descent using a parachute or parachutes."}
                 }
         };

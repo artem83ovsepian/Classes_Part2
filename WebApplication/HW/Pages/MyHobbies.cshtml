@@ -3,15 +3,17 @@
 @{
     ViewData["Title"] = Model.PageName;
 }
+<h1 class="myHeader">I'm Interested In</h1>
+
 <ul class="hobbies-list">
 @foreach (var item in Model.MyHobbies.OrderBy(i => i.Id))
 {
     
         <li>
             <div class="align-center">
-                <h4 class="text-info">@item.Name</h4>
-                <img src=@item.Photo />
-                <p>@item.Description</p>
+                    <img class="myHobbyImage" src=@item.Photo />
+                    <h4 class="myTextItem">@item.Name</h4>
+                    <p class="mtTextDescription">@item.Description</p>
             </div>
         </li>
     

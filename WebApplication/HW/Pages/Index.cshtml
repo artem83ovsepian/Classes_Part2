@@ -6,32 +6,39 @@
 
 <div class="about-wrapper">
 <div class="col-6">
-    <h1 class="text-info">@Model.Name</h1>
-    <img src=@Model.Photo />
+        <h1 class="myText">@Model.Name</h1>
+        <img class="myImage" src=@Model.Photo />
     <p>I'm @Model.Description</p>
 </div>
 
 <div>
-    <h4 class="text-info">Personal Qualities</h4>
-    @foreach(var item in Model.PersonalQualities)
-    {
-        <tr>
-            <li>@item</li>
-        </tr>
-    }
+    <h4 class="myTextItem">Personal Qualities</h4>
+        <div class="myBox">
+        @foreach(var item in Model.PersonalQualities)
+        {
+            <tr>
+                <li>@item</li>
+            </tr>
+        }
+        </div>
     <br>
-    <h4 class="text-info">My Age</h4>
-    <p>@Model.Age years</p>
+
+        
+    <h4 class="myTextItem">My Age</h4>
+        <div class="myBox">
+            <li>@Model.Age years</li>
+        </div>
     <br>
-    <h4 class="text-info">My Age</h4>
-    <p>@Model.Age years</p>
+
+    <h4 class="myTextItem">My Education</h4>
+        <div class="myBox">
+            <li>@Model.Education</li>
+        </div>
     <br>
-    <h4 class="text-info">My Education</h4>
-    <p>@Model.Education</p>
-    <br>
+
 </div>
 </div>
 
 <div>
-    <a href="@Model.URL">Find me on Wiki</a>
+    <a class="myTextItem" href="@Model.URL">Find me on Wiki</a>
 </div>

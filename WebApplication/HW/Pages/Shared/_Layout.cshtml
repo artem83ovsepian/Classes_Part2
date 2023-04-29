@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="myStyle">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MyWebApplication</a>
+                <a class="myHeaderLink" asp-area="" asp-page="/Index">MyWebApplication</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <form class="nav-link">
-                                <button asp-page="./MyHobbies">My Hobbies</button>
+                                <button class="myButton" asp-page="./MyHobbies">My Hobbies</button>
                             </form>
                         </li>
                     </ul>
@@ -35,9 +35,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="myStyleFooter">
         <div class="container">
-            &copy; 2023 - MyWebApplication - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - MyWebApplication
         </div>
     </footer>
 
